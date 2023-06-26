@@ -1,0 +1,73 @@
+:root {
+  --background-color: #6937de;
+  --button-color: #3cd609;
+  --button-color-hover: #51e022;
+  --button-color-activate: #45c41b;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh
+}
+
+.button {
+  border: none;
+  background-color: var(--button-color);
+  padding: .5rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s
+}
+
+.button:hover {
+  background-color: var(--button-color-hover);
+}
+
+.button:activate {
+  background-color: var(--button-color-activate);
+}
+
+.bubble {
+  transition: .2s;
+  display: none;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1rem
+}
+
+.change {
+  display: flex;
+  font-size: 1rem;
+  transition: 2s;
+  animation: moveUp 1s forwards;
+}
+
+.change-color {
+  margin-top: 3rem
+}
+
+li {
+  cursor: pointer
+}
+
+b {
+  color: white;
+  margin-top: 1rem;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateY(0);
+  }
+}
